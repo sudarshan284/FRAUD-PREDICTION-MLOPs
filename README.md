@@ -16,12 +16,16 @@ git clone https://github.com/apache/airflow
 cd airflow-projects/fraud-prediction
 pip install -r requirements.txt
 ```
+![image](https://github.com/ashishk831/FRAUD-PREDICTION-MLOPs/assets/81232686/f2c7a96a-300d-497c-aa68-91f3315a2ca9)
 
 Airflow, an open source Apache Software Foundation workflow management platform, is used to automate, schedule, and monitor workflows. Airflow workflows are defined as directed acyclic graphs (DAGs). DAGs are made up of tasks that are executed in a specific order. Airflow provides a number of features that make it a good choice for workflow management, including:
 
 *``Scalability:`` Airflow can be scaled to handle a large number of tasks and workflows.
+
 *``Reliability:`` Airflow is designed to be reliable and fault-tolerant.
+
 *``Flexibility:`` Airflow can be used to automate a wide variety of workflows, from simple to complex.
+
 *``Extensibility:`` Airflow can be easily extended to meet the needs of specific organizations.
 
 ```bash
@@ -59,37 +63,63 @@ Fill the details
 
 ## Training dataset
 The sample dataset includes various details,below are the details:
-```
-*``trans_date_trans_time`` - Transaction DateTime
+*``trans_date_trans_time``:- Transaction DateTime
+
 *``cc_num`` - Credit Card Number of Customer
+
 *``merchant`` - Merchant Name
+
 *``category`` - Category of Merchant
+
 *``amt`` - Amount of Transaction
+
 *``first`` - First Name of Credit Card Holder
+
 *``last`` - Last Name of Credit Card Holder
+
 *``gender`` - Gender of Credit Card Holder
+
 *``street`` - Street Address of Credit Card Holder
+
 *``city`` - City of Credit Card Holder
+
 *``state`` - State of Credit Card Holder
+
 *``zip`` - Zip of Credit Card Holder
+
 *``lat`` - Latitude Location of Credit Card Holder
+
 *``long`` - Longitude Location of Credit Card Holder
+
 *``city_pop`` - Credit Card Holder's City Population
+
 *``job`` - Job of Credit Card Holder
+
 *``dob`` - Date of Birth of Credit Card Holder
+
 *``trans_num`` - Transaction Number
+
 *``unix_time`` - UNIX Time of transaction
+
 *``merch_lat`` - Latitude Location of Merchant
+
 *``merch_long`` - Longitude Location of Merchant
+
 *``is_fraud`` - Fraud Flag <--- Target Class
-```
+
+
 ## Training Pipeline
 Our standard training pipeline consists of several steps:
 *``data_upload_operator``:-
+
 *``data_download_operator``:-
+
 *``data_preprocessing_operator``:-
+
 *``data_split_operator``:-
+
 *``model_training_operator``:-
+
 *``model_evaluation_operator``:-
 
 ## Model Selection Pipeline
@@ -100,8 +130,7 @@ The first four steps of the pipeline are the same as above, but we have added th
 ## Model Prediction Pipeline
 We can run two pipelines as follows:
 *``model_prediction_operator``:-
-* The continuous deployment pipeline:
-``python run_deployment.py``
+
 ## Demo Streamlit App
 There is a live demo of this project using Streamlit which you can find here. It takes some input features for the product and predicts the customer satisfaction rate using the latest trained models. If you want to run this Streamlit app in your local system, you can run the following command:
 
