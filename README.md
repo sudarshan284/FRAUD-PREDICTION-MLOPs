@@ -137,6 +137,7 @@ There is a live demo of this project using Streamlit which you can find here. It
 ``streamlit run streamlit_app.py``
 
 Below is the sample model result.
+
 ![image](https://github.com/ashishk831/FRAUD-PREDICTION-MLOPs/assets/81232686/011aa5d8-d32b-491d-9d2c-cb177db6c7e2) ![image](https://github.com/ashishk831/FRAUD-PREDICTION-MLOPs/assets/81232686/62f6ea06-c1ba-454d-8ed7-a046382930e2)
 
 
