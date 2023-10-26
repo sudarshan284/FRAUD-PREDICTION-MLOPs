@@ -115,30 +115,30 @@ The sample dataset includes various details,below are the details:
 
 ## Training Pipeline
 Our standard training pipeline consists of several steps:
-* ``data_upload_operator``:-
+* ``data_upload_operator``:- This operator will take the file from local storage and upload it into the azure blob container.
 
-* ``data_download_operator``:-
+* ``data_download_operator``:- This operator will download the file from the azure to local storage.
 
-* ``data_preprocessing_operator``:-
+* ``data_preprocessing_operator``:- This operator performs the preprocessing on the dataset downloaded from azure.
 
-* ``data_split_operator``:-
+* ``data_split_operator``:- This operator will split the dataset into two part. On first part the model will be trained and on second set model will be tested.
 
-* ``model_training_operator``:-
+* ``model_training_operator``:- This operator is used to train model on dataset.
 
-* ``model_evaluation_operator``:-
+* ``model_evaluation_operator``:- This operator is used to evaluate the model performance.
 
 Below is the pipeline workflow which we will implement in this project.
 ![image](https://github.com/ashishk831/FRAUD-PREDICTION-MLOPs/assets/81232686/81f2bd60-dcd0-44bb-91ea-f348dd65420b)
 
 
 ## Model Selection Pipeline
-Fill the details
-The first four steps of the pipeline are the same as above, but we have added the following additional ones:
-* ``model_selection_operator``:-
+In model training pipeline we have used DecisionTreeClassifier, RandomForestClassifier, AdaBoostClassifier and GradientBoostingClassifier.
+
+* ``model_selection_operator``:- In model training operator we used multiple ML algorithm to train model. In this operator we will compare the different model and choose the best model. 
 
 ## Model Prediction Pipeline
 We can run two pipelines as follows:
-* ``model_prediction_operator``:-
+* ``model_prediction_operator``:- This operator is used to predict the model on new unseen dataset.
 
 ## Model Monitoring and Log Analysis
 ![image](https://github.com/ashishk831/FRAUD-PREDICTION-MLOPs/assets/81232686/c6f942af-ad8b-45c3-be13-52300a737b24)
