@@ -20,9 +20,9 @@ pip install -r requirements.txt
 
 Airflow, an open source Apache Software Foundation workflow management platform, is used to automate, schedule, and monitor workflows. Airflow workflows are defined as directed acyclic graphs (DAGs). DAGs are made up of tasks that are executed in a specific order. Airflow provides a number of features that make it a good choice for workflow management, including:
 
-*``Scalability:`` Airflow can be scaled to handle a large number of tasks and workflows.
+* ``Scalability:`` Airflow can be scaled to handle a large number of tasks and workflows.
 
-*``Reliability:`` Airflow is designed to be reliable and fault-tolerant.
+* ``Reliability:`` Airflow is designed to be reliable and fault-tolerant.
 
 *``Flexibility:`` Airflow can be used to automate a wide variety of workflows, from simple to complex.
 
