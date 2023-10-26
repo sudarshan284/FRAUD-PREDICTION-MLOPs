@@ -38,11 +38,10 @@ airflow scheduler
 airflow webserver –port <port number>
 ```
 
-If you are running the run_deployment.py script, you will also need to install some integrations using ZenML:
+Login to the Airflow dashboard using the username and password created above. 
 
-```
-zenml integration install mlflow -y
-```
+![image](https://github.com/ashishk831/FRAUD-PREDICTION-MLOPs/assets/81232686/35016988-aa8a-44cb-9d21-2b5beb2fc9f4)
+
 
 The project can only be executed with a ZenML stack that has an MLflow experiment tracker and model deployer as a component. Configuring a new stack with the two components are as follows:
 
