@@ -43,14 +43,11 @@ Login to the Airflow dashboard using the username and password created above.
 ![image](https://github.com/ashishk831/FRAUD-PREDICTION-MLOPs/assets/81232686/35016988-aa8a-44cb-9d21-2b5beb2fc9f4)
 
 
-The project can only be executed with a ZenML stack that has an MLflow experiment tracker and model deployer as a component. Configuring a new stack with the two components are as follows:
+In this project we will be using MS Azure, to fetch the data from storage container. Use below link for reference.
+https://learn.microsoft.com/en-us/azure/storage/common/storage-account-create?tabs=azure-portal
 
-```
-zenml integration install mlflow -y
-zenml experiment-tracker register mlflow_trc_hrb --flavor=mlflow
-zenml model-deployer register mlflow_hrb --flavor=mlflow
-zenml stack register mlflow_stack_hrb -a default -o default -d mlflow_hrb -e mlflow_trc_hrb --set
-```
+![image](https://github.com/ashishk831/FRAUD-PREDICTION-MLOPs/assets/81232686/59c5ac0a-e801-43d8-a3dd-edce5d12c01b)
+
 
 ## Solution
 Fill the details
