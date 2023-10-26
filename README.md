@@ -59,7 +59,14 @@ In this project we will be using MS Azure, to fetch the data from storage contai
 
 
 ## Solution
-Fill the details
+In real world build a model is not enough, we have to deploy the model into the production and monitor the model performance over time and how it is interacting with real world data. So, I build an end-to-end pipeline for continuously predicting and deploying the machine learning model alongside a data application that utilizes the latest deployed model for the business to consume. This way can track our production ready model. I highly suggest you to refer ZenML document for more details.
+
+Using Airflow we can monitor the logs in real-time as well as old logs can also be checked.As shown below.
+![image](https://github.com/ashishk831/FRAUD-PREDICTION-MLOPs/assets/81232686/122eaa72-a56b-43f1-b4a0-cf55487ba226)
+
+
+I will show how I used Airflow pipeline to create a model that uses past transactions data to predict the fraud transactions for customer or third parties. I aslo deployed a Streamlit application to showcase the final end product.
+
 
 ## Training dataset
 The sample dataset includes various details,below are the details:
@@ -121,6 +128,10 @@ Our standard training pipeline consists of several steps:
 * ``model_training_operator``:-
 
 * ``model_evaluation_operator``:-
+
+Below is the pipeline workflow which we will implement in this project.
+![image](https://github.com/ashishk831/FRAUD-PREDICTION-MLOPs/assets/81232686/81f2bd60-dcd0-44bb-91ea-f348dd65420b)
+
 
 ## Model Selection Pipeline
 Fill the details
