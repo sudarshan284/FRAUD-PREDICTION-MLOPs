@@ -17,7 +17,12 @@ cd airflow-projects/fraud-prediction
 pip install -r requirements.txt
 ```
 
-Airflow comes bundled with a React-based dashboard. This dashboard allows you to observe your stacks, stack components and pipeline DAGs in a dashboard interface. To access this, you need to launch the Airflow Server and Dashboard locally, but first you must install the optional dependencies for the Airflow server:
+Airflow, an open source Apache Software Foundation workflow management platform, is used to automate, schedule, and monitor workflows. Airflow workflows are defined as directed acyclic graphs (DAGs). DAGs are made up of tasks that are executed in a specific order. Airflow provides a number of features that make it a good choice for workflow management, including:
+
+*``Scalability:`` Airflow can be scaled to handle a large number of tasks and workflows.
+*``Reliability:`` Airflow is designed to be reliable and fault-tolerant.
+*``Flexibility:`` Airflow can be used to automate a wide variety of workflows, from simple to complex.
+*``Extensibility:`` Airflow can be easily extended to meet the needs of specific organizations.
 
 ```bash
 #Installing airflow
@@ -53,32 +58,47 @@ In this project we will be using MS Azure, to fetch the data from storage contai
 Fill the details
 
 ## Training dataset
-The sample dataset includes various details about each order, such as:
-* ``Arrival details``: Arrival year,Arrival month,Arrival week,Arrival day of month
-* ``Stay details``: Week nights stay ,Weekend nights stay.
-* ``Person details``: Adults, Children, Babies.
-* ``Cancellation details``: Previous cancellations,No previous cancellations.
-* ``Room type details``:Reserved room,Assigned room,Booking changes.
-* ``Facilites``: Meal,Car parking and etc.
+The sample dataset includes various details,below are the details:
+*``trans_date_trans_time`` - Transaction DateTime
+*``cc_num`` - Credit Card Number of Customer
+*``merchant`` - Merchant Name
+*``category`` - Category of Merchant
+*``amt`` - Amount of Transaction
+*``first`` - First Name of Credit Card Holder
+*``last`` - Last Name of Credit Card Holder
+*``gender`` - Gender of Credit Card Holder
+*``street`` - Street Address of Credit Card Holder
+*``city`` - City of Credit Card Holder
+*``state`` - State of Credit Card Holder
+*``zip`` - Zip of Credit Card Holder
+*``lat`` - Latitude Location of Credit Card Holder
+*``long`` - Longitude Location of Credit Card Holder
+*``city_pop`` - Credit Card Holder's City Population
+*``job`` - Job of Credit Card Holder
+*``dob`` - Date of Birth of Credit Card Holder
+*``trans_num`` - Transaction Number
+*``unix_time`` - UNIX Time of transaction
+*``merch_lat`` - Latitude Location of Merchant
+*``merch_long`` - Longitude Location of Merchant
+*``is_fraud`` - Fraud Flag <--- Target Class
 
 ## Training Pipeline
 Our standard training pipeline consists of several steps:
-* ``ingest_data()``:- This methods will take the dataset location as an argument and convert it into a dataframe.
-* ``clean_data()``: - This method will clean the data and remove the unwanted columns. It fills null values with median and remove outliers.
-* ``train_model()``: - This step will train models linear regression. I am also using MLflow to track our model performance, parameters, metrics and for saving the model.
-* ``evaluate_model()``: -  This step will evaluate the model and save the metrics using MLflow autologging into the artifact store. Autologging can be used to compare the performance of different models and decide to select the best model. 
+*``data_upload_operator``:-
+*``data_download_operator``:-
+*``data_preprocessing_operator``:-
+*``data_split_operator``:-
+*``model_training_operator``:-
+*``model_evaluation_operator``:-
 
-## Deployment Pipeline
+## Model Selection Pipeline
 Fill the details
 The first four steps of the pipeline are the same as above, but we have added the following additional ones:
-* ``deployment_trigger``: The step checks whether the newly trained model meets the criteria set for deployment.
-* ``model_deployer``: This step deploys the model as a service using MLflow (if deployment criteria is met).
+*``model_selection_operator``:-
 
-## Executing Code
+## Model Prediction Pipeline
 We can run two pipelines as follows:
-
-* Training pipeline:
-`` python run_pipeline.py`` 
+*``model_prediction_operator``:-
 * The continuous deployment pipeline:
 ``python run_deployment.py``
 ## Demo Streamlit App
