@@ -1,12 +1,10 @@
 # FRAUD-PREDICTION-MLOPs
 
 ## Introduction
-In today's hyper-competative market getting a customer is a very challenging, setting the right price for hotel rooms is very important.This project focuses on hotel rooms price optimization using machine learning techniques to predict the right price for hotel rooms. This is a crucial part of developing dynamic pricing strategies, leading to increased room booking and customer satisfaction.
+Fill the details
 
 ## Problem Statement
-In this project we will build a model that predicts the optimal price for a hotel room based on various factors.This prediction would help us to make an informed decision while pricing a hotel room, to attract more custormer and increase hotel room occupancy.
-
-By analyzing this information, we aim to predict the optimal price for room booking.This would aid in making strategic pricing decisions, thereby optimizing room prices effectively.
+Fill the details
 
 ## Deployment
 
@@ -43,9 +41,7 @@ zenml stack register mlflow_stack_hrb -a default -o default -d mlflow_hrb -e mlf
 ```
 
 ## Solution
-In real world build a model is not enough, we have to deploy the model into the production and monitor the model performance over time and how it is interacting with real world data. So, I build an end-to-end pipeline for continuously predicting and deploying the machine learning model alongside a data application that utilizes the latest deployed model for the business to consume. This way can track our production ready model. I highly suggest you to refer ZenML document for more details.
-
-I will show how I used a ZenML pipeline to create a model that uses historical hotel booking data to predict the room price for the customer or client. I also deployed a Streamlit application to showcase the final end product.
+Fill the details
 
 ## Training dataset
 The sample dataset includes various details about each order, such as:
@@ -64,7 +60,7 @@ Our standard training pipeline consists of several steps:
 * ``evaluate_model()``: -  This step will evaluate the model and save the metrics using MLflow autologging into the artifact store. Autologging can be used to compare the performance of different models and decide to select the best model. 
 
 ## Deployment Pipeline
-We have another pipeline, the deployment_pipeline.py, that extends the training pipeline, and implements a continuous deployment workflow. It ingests and processes input data, trains a model and then (re)deploys the prediction server that serves the model if it meets our evaluation criteria.
+Fill the details
 The first four steps of the pipeline are the same as above, but we have added the following additional ones:
 * ``deployment_trigger``: The step checks whether the newly trained model meets the criteria set for deployment.
 * ``model_deployer``: This step deploys the model as a service using MLflow (if deployment criteria is met).
