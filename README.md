@@ -59,6 +59,7 @@ Fill the details
 
 ## Training dataset
 The sample dataset includes various details,below are the details:
+```
 *``trans_date_trans_time`` - Transaction DateTime
 *``cc_num`` - Credit Card Number of Customer
 *``merchant`` - Merchant Name
@@ -81,7 +82,7 @@ The sample dataset includes various details,below are the details:
 *``merch_lat`` - Latitude Location of Merchant
 *``merch_long`` - Longitude Location of Merchant
 *``is_fraud`` - Fraud Flag <--- Target Class
-
+```
 ## Training Pipeline
 Our standard training pipeline consists of several steps:
 *``data_upload_operator``:-
