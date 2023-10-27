@@ -52,7 +52,8 @@ Login to the Airflow dashboard using the username and password created above.
 ![image](https://github.com/ashishk831/FRAUD-PREDICTION-MLOPs/assets/81232686/35016988-aa8a-44cb-9d21-2b5beb2fc9f4)
 
 
-![image](https://github.com/ashishk831/FRAUD-PREDICTION-MLOPs/assets/81232686/4566a241-49c9-4099-a6db-29a0a510930a)
+![image](https://github.com/ashishk831/FRAUD-PREDICTION-MLOPs/assets/81232686/b6852824-f813-4185-9be8-a4f7de747094)
+
 
 In this project we will be using MS Azure, to fetch the data from storage container. Use below link for reference.
 ```https://learn.microsoft.com/en-us/azure/storage/common/storage-account-create?tabs=azure-portal```
