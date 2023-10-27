@@ -24,7 +24,7 @@ class ModelTrainingDTCOperator(BaseOperator):
     def execute(self, context):
         self.log.info(f'Training a machine learning model using data from {self.X_train_file,self.y_train_file }')
 
-            try:
+        try:
             X_train = pd.read_csv(self.X_train_file)
             y_train = pd.read_csv(self.y_train_file)
             
