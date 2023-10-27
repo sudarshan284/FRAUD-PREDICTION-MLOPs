@@ -146,9 +146,10 @@ As we have half million test record on which model is neither training or tested
 
 ## Model Monitoring and Log Analysis
 
-Airflow also offer the feature to monitor our model in real-time. 
+Airflow also offer the feature to monitor our model in real-time. When the DAGs are executed there are different status through which it passes.Below is status code show.  
 ![image](https://github.com/ashishk831/FRAUD-PREDICTION-MLOPs/assets/81232686/c6f942af-ad8b-45c3-be13-52300a737b24)
 
+In Airflow we can also monitor the logs, DAGS generate log when the pipeline is executed. Below is the image.
 ![image](https://github.com/ashishk831/FRAUD-PREDICTION-MLOPs/assets/81232686/122eaa72-a56b-43f1-b4a0-cf55487ba226)
 
 ## Demo Streamlit App
