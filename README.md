@@ -157,9 +157,15 @@ In Airflow we can also monitor the logs, DAGS generate log when the pipeline is 
 
 ## Demo Streamlit App ![image](https://github.com/ashishk831/FRAUD-PREDICTION-MLOPs/assets/81232686/85fbe63c-37e7-4757-af9b-7d15127ef02a)
 
-There is a live demo of this project using Streamlit which you can find here. It takes some input features for the product and predicts the customer satisfaction rate using the latest trained models. If you want to run this Streamlit app in your local system, you can run the following command:
+There is a live demo of this project using Streamlit which you can find here. It takes some input features for the product and predicts the customer satisfaction rate using the latest trained models. If you want to run this Streamlit app in your local system, you can run the following command to access the app locally.
 
 ``streamlit run streamlit_app.py``
+
+The cloud version of app can also be accessed using below url.
+
+```
+https://fraud-prediction-mlops-d8rcgc2prmv9xapx5ahhhn.streamlit.app/
+```
 
 Below is the sample model result.
 
