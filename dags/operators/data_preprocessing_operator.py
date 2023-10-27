@@ -5,17 +5,11 @@ import calendar
 
 class DataPreprocessingOperator(BaseOperator):
     @apply_defaults
-    def __init__(self, preprocessed_data, *args, **kwargs): #input_file:pd.DataFrame,
+    def __init__(self, preprocessed_data, *args, **kwargs): 
         super(DataPreprocessingOperator, self).__init__(*args, **kwargs)
-        #self.input_file = input_file
         self.preprocessed_data = preprocessed_data
 
     def execute(self, context):
-        #self.log.info(f'Performing data preprocessing for {self.input_file}')
-
-        # Retrieve the ingested data from the previous task using XCom
-        #ingested_data = context['ti'].xcom_pull(task_ids='data_ingest_task', key='ingested_data')
-
         try:
             # Perform data preprocessing logic here
             # For example, you can clean, transform, or engineer features in the ingested data
