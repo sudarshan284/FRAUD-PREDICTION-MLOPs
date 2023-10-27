@@ -69,7 +69,7 @@ I will show how I used Airflow pipeline to create a model that uses past transac
 
 
 ## Training dataset
-We have used the dataset from the kaggle.The dataset contains almost 10 million training record on which we will train the model.We also have half million test record on which model we will perdiction. This dataset is the imbalance dataset as fraud transaction are very less comapre to the valid transaction.The sample dataset includes various details,below are the details:
+We have used the dataset from the kaggle.The dataset contains more than 10 million training record on which we will train-test the model.We also have half million test record on which model we will perform perdiction. This dataset is the imbalance dataset as fraud transaction are very less comapre to the valid transaction.The sample dataset includes various details,below are the details:
 
 * ``trans_date_trans_time``:- Transaction DateTime
 
