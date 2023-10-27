@@ -24,10 +24,7 @@ class ModelTrainingDTCOperator(BaseOperator):
     def execute(self, context):
         self.log.info(f'Training a machine learning model using data from {self.X_train_file,self.y_train_file }')
 
-        # Retrieve the train data from the previous task using XCom
-        #train_data = context['ti'].xcom_pull(task_ids='data_split_task', key='train_data')
-
-        try:
+            try:
             X_train = pd.read_csv(self.X_train_file)
             y_train = pd.read_csv(self.y_train_file)
             
@@ -35,8 +32,6 @@ class ModelTrainingDTCOperator(BaseOperator):
             print(y_train.shape)
             
             # Initialize and train your machine learning model (replace with your model class)
-            # model = RandomForestClassifier()  # Replace with your model class and its hyperparameters
-            # model.fit(X_train, y_train)
             DTC = DecisionTreeClassifier()
             DTC.fit(X_train, y_train)
             # Save the trained model to the provided model_file
