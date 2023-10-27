@@ -52,6 +52,8 @@ Login to the Airflow dashboard using the username and password created above.
 ![image](https://github.com/ashishk831/FRAUD-PREDICTION-MLOPs/assets/81232686/35016988-aa8a-44cb-9d21-2b5beb2fc9f4)
 
 
+![image](https://github.com/ashishk831/FRAUD-PREDICTION-MLOPs/assets/81232686/1faf5e37-54ff-46d1-ad52-1b0486b1df94)
+
 In this project we will be using MS Azure, to fetch the data from storage container. Use below link for reference.
 ```https://learn.microsoft.com/en-us/azure/storage/common/storage-account-create?tabs=azure-portal```
 
@@ -67,7 +69,8 @@ I will show how I used Airflow pipeline to create a model that uses past transac
 
 
 ## Training dataset
-The sample dataset includes various details,below are the details:
+We have used the dataset from the kaggle.The dataset contains almost 10 million training record on which we will train the model.We also have half million test record on which model we will perdiction. This dataset is the imbalance dataset as fraud transaction are very less comapre to the valid transaction.The sample dataset includes various details,below are the details:
+
 * ``trans_date_trans_time``:- Transaction DateTime
 
 * ``cc_num`` - Credit Card Number of Customer
@@ -119,7 +122,7 @@ Our standard training pipeline consists of several steps:
 
 * ``data_download_operator``:- This operator will download the file from the azure to local storage.
 
-* ``data_preprocessing_operator``:- This operator performs the preprocessing on the dataset downloaded from azure.
+* ``data_preprocessing_operator``:- This operator performs the preprocessing on the dataset downloaded from azure. Since our dataset imbalanced once data clearing is completed, we will use undersampling or oversampling techniques.
 
 * ``data_split_operator``:- This operator will split the dataset into two part. On first part the model will be trained and on second set model will be tested.
 
@@ -132,15 +135,18 @@ Below is the pipeline workflow which we will implement in this project.
 
 
 ## Model Selection Pipeline
-In model training pipeline we have used DecisionTreeClassifier, RandomForestClassifier, AdaBoostClassifier and GradientBoostingClassifier.
+In model training pipeline we have used ensemble learning with DecisionTreeClassifier, RandomForestClassifier, AdaBoostClassifier and GradientBoostingClassifier. Once model training is completed then model evaluatoin will be executed. Then we will created model selection pipeline which compare the model and select the best model.
 
 * ``model_selection_operator``:- In model training operator we used multiple ML algorithm to train model. In this operator we will compare the different model and choose the best model. 
 
 ## Model Prediction Pipeline
-We can run two pipelines as follows:
+As we have half million test record on which model is neither training or tested. We will use this data set to check how good is our model.  
+
 * ``model_prediction_operator``:- This operator is used to predict the model on new unseen dataset.
 
 ## Model Monitoring and Log Analysis
+
+Airflow also offer the feature to monitor our model in real-time. 
 ![image](https://github.com/ashishk831/FRAUD-PREDICTION-MLOPs/assets/81232686/c6f942af-ad8b-45c3-be13-52300a737b24)
 
 ![image](https://github.com/ashishk831/FRAUD-PREDICTION-MLOPs/assets/81232686/122eaa72-a56b-43f1-b4a0-cf55487ba226)
