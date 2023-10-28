@@ -155,7 +155,8 @@ Airflow also offer the feature to monitor our model in real-time. When the DAGs 
 In Airflow we can also monitor the logs, DAGS generate log when the pipeline is executed. Below is the image.
 ![image](https://github.com/ashishk831/FRAUD-PREDICTION-MLOPs/assets/81232686/122eaa72-a56b-43f1-b4a0-cf55487ba226)
 
-## Demo Streamlit App ![image](https://github.com/ashishk831/FRAUD-PREDICTION-MLOPs/assets/81232686/85fbe63c-37e7-4757-af9b-7d15127ef02a)
+## Demo Streamlit App ![image](https://github.com/ashishk831/FRAUD-PREDICTION-MLOPs/assets/81232686/85fbe63c-37e7-4757-af9b-7d15127ef02a) ![image](https://github.com/ashishk831/FRAUD-PREDICTION-MLOPs/assets/81232686/c62ea721-3321-4ff8-9d9d-b9d7f8727e9a)
+
 
 There is a live demo of this project using Streamlit which you can find here. It takes some input features for the product and predicts the customer satisfaction rate using the latest trained models. If you want to run this Streamlit app in your local system, you can run the following command to access the app locally.
 
