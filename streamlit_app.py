@@ -39,7 +39,7 @@ def main():
     age = st.text_input("Age")
     trans_month = st.slider("Transaction Month",min_value=1,max_value=12,step=1)
     #trans_year = st.slider("Transaction Year",2019,2020)
-    trans_year = st.slider("Transaction Year",min_value=2019,max_value=2023,step=1)
+    trans_year = st.slider("Transaction Year",min_value=2019,max_value=2022,step=1)
     
     latitudinal_distance = st.slider("Latitudinal Distance",min_value=0.0,max_value=1.0,step=0.001)
     longitudinal_distance = st.slider("Longitudinal Distance",min_value=0.0,max_value=1.0,step=0.001)    
