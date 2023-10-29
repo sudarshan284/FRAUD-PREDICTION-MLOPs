@@ -1,11 +1,5 @@
 from azure.storage.blob import BlobServiceClient
-
-storage_account_key = "+w6iadskKBmzsPTwmDpkkXsuCcJ2XFcW2cmuh8fcAvXSFNVLOk2UpPwqWc2WMYNbDRT/aRqz+44c+ASt1yRMMA=="
-storage_account_name = "cardstorage2"
-connection_string = "DefaultEndpointsProtocol=https;AccountName=cardstorage2;AccountKey=+w6iadskKBmzsPTwmDpkkXsuCcJ2XFcW2cmuh8fcAvXSFNVLOk2UpPwqWc2WMYNbDRT/aRqz+44c+ASt1yRMMA==;EndpointSuffix=core.windows.net"
-container_name = "cardcontainer2"
-file_path_up = "/home/unibash/G3/B/FRAUD_DETECTION_IN_IMBALANCED_DATA/data/raw/Train1.csv"
-file_name = "Train11"
+from config.constant import storage_account_key, storage_account_name, connection_string, container_name, file_path_up, file_name
 
 
 def uploadToBlobStorage():
