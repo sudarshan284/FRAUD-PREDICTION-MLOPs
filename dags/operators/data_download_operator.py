@@ -1,12 +1,5 @@
 from azure.storage.blob import BlobServiceClient
-
-storage_account_key = "+w6iadskKBmzsPTwmDpkkXsuCcJ2XFcW2cmuh8fcAvXSFNVLOk2UpPwqWc2WMYNbDRT/aRqz+44c+ASt1yRMMA=="
-storage_account_name = "cardstorage2"
-connection_string = "DefaultEndpointsProtocol=https;AccountName=cardstorage2;AccountKey=+w6iadskKBmzsPTwmDpkkXsuCcJ2XFcW2cmuh8fcAvXSFNVLOk2UpPwqWc2WMYNbDRT/aRqz+44c+ASt1yRMMA==;EndpointSuffix=core.windows.net"
-container_name = "cardcontainer2"
-blob_name="Train11"
-file_path_down="/home/unibash/G3/B/FRAUD_DETECTION_IN_IMBALANCED_DATA/data/raw/blobfile.csv"
-
+from config.constant import storage_account_key, storage_account_name, connection_string, container_name, blob_name, file_path_down
 
 def downloadFromBlobStorage():
     try:
