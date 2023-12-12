@@ -64,7 +64,7 @@ In this project we will be using MS Azure, to fetch the data from storage contai
 
 
 ## Solution
-In real world build a model is not enough, we have to deploy the model into the production and monitor the model performance over time and how it is interacting with real world data. So, I build an end-to-end pipeline for continuously predicting and deploying the machine learning model alongside a data application that utilizes the latest deployed model for the business to consume. This way can track our production ready model. I highly suggest you to refer ZenML document for more details.
+In real world build a model is not enough, we have to deploy the model into the production and monitor the model performance over time and how it is interacting with real world data. So, I build an end-to-end pipeline for continuously predicting and deploying the machine learning model alongside a data application that utilizes the latest deployed model for the business to consume. This way can track our production ready model.
 
 Using Airflow we can monitor the logs in real-time as well as old logs can also be checked.
 
